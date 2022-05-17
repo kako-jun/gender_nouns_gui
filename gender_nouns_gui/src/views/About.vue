@@ -4,7 +4,7 @@
       <h2 class="title is-spaced maruji">API Reference</h2>
       <h3 class="subtitle is-spaced maruji">URL</h3>
       <p>
-        <code>https://gender.llll-ll.com/api/translate</code>
+        <code>https://gender-nouns-api.llll-ll.com/api/translate</code>
       </p>
       <h3 class="subtitle is-spaced maruji m-t-lg">Query</h3>
       <div class="columns is-centered">
@@ -36,12 +36,7 @@
             </tr>
             <tr>
               <td>
-                <code>ar</code>,
-                <code>fr</code>,
-                <code>de</code>,
-                <code>hi</code>,
-                <code>it</code>,
-                <code>pt</code>,
+                <code>ar</code>, <code>fr</code>, <code>de</code>, <code>hi</code>, <code>it</code>, <code>pt</code>,
                 <code>ru</code>,
                 <code>es</code>
               </td>
@@ -54,27 +49,27 @@
       <div class="columns is-centered m-t-md">
         <ul class="has-text-left">
           <li>
-            <code>https://gender.llll-ll.com/api/translate?q=cat</code>
+            <code>https://gender-nouns-api.llll-ll.com/api/translate?q=cat</code>
           </li>
           <li>
-            <code>https://gender.llll-ll.com/api/translate?q=cat&exact</code>
+            <code>https://gender-nouns-api.llll-ll.com/api/translate?q=cat&exact</code>
           </li>
           <li>
-            <code>https://gender.llll-ll.com/api/translate?q=cat&exact&fr</code>
+            <code>https://gender-nouns-api.llll-ll.com/api/translate?q=cat&exact&fr</code>
           </li>
           <li>
-            <code>https://gender.llll-ll.com/api/translate?q=cat&exact=true&fr=true</code>
-          </li>
-          <li>&nbsp;</li>
-          <li>
-            <code>https://gender.llll-ll.com/api/translate?q=cat&ar&fr&de&hi&it&pt&ru&es</code>
+            <code>https://gender-nouns-api.llll-ll.com/api/translate?q=cat&exact=true&fr=true</code>
           </li>
           <li>&nbsp;</li>
           <li>
-            <code>https://gender.llll-ll.com/api/translate?en-starts-with=a</code>
+            <code>https://gender-nouns-api.llll-ll.com/api/translate?q=cat&ar&fr&de&hi&it&pt&ru&es</code>
+          </li>
+          <li>&nbsp;</li>
+          <li>
+            <code>https://gender-nouns-api.llll-ll.com/api/translate?en-starts-with=a</code>
           </li>
           <li>
-            <code>https://gender.llll-ll.com/api/translate?en-starts-with=a&fr</code>
+            <code>https://gender-nouns-api.llll-ll.com/api/translate?en-starts-with=a&fr</code>
           </li>
         </ul>
       </div>
@@ -116,9 +111,8 @@ export default {
   },
   created() {},
   computed: {},
-  methods: {}
+  methods: {},
 };
 </script>
 
-<style scoped lang="scss" scoped>
-</style>
+<style scoped lang="scss" scoped></style>

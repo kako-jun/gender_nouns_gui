@@ -1,4 +1,4 @@
-FROM node:17
+FROM node:12
 WORKDIR /app
 
 # ENV HOST 0.0.0.0
@@ -6,7 +6,7 @@ WORKDIR /app
 
 COPY ./gender_nouns_gui /app
 # RUN apk add python make g++
-RUN apt-get install g++ build-essential
+# RUN apt-get install g++ build-essential
 RUN npm install
 
 CMD ["npm", "run", "build"]

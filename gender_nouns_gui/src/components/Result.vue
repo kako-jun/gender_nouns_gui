@@ -11,15 +11,12 @@
         <span class="tag is-info">♂ masculine noun</span>
       </div>
 
-      <div v-if="loading===false && rows.length===0">no results found.</div>
+      <div v-if="loading === false && rows.length === 0">no results found.</div>
 
       <div v-for="row in rows" :key="row.en">
         <h3 class="title is-4 is-spaced">
-          {{row.en}}
-          <button
-            class="button is-outlined is-rounded is-small m-l-xs"
-            v-on:click="copy_to_clipboard(row.en)"
-          >
+          {{ row.en }}
+          <button class="button is-outlined is-rounded is-small m-l-xs" v-on:click="copy_to_clipboard(row.en)">
             <i class="fas fa-clipboard" aria-hidden="true"></i>
           </button>
         </h3>
@@ -34,18 +31,18 @@
             </tr>
           </thead>
           <tbody>
-            <LanguageRow v-if="ar" language_full="Arabic" :ts="row.ar"/>
-            <LanguageRow v-if="fr" language_full="French" :ts="row.fr"/>
-            <LanguageRow v-if="de" language_full="German" :ts="row.de"/>
-            <LanguageRow v-if="hi" language_full="Hindi" :ts="row.hi"/>
-            <LanguageRow v-if="it" language_full="Italian" :ts="row.it"/>
-            <LanguageRow v-if="pt" language_full="Portuguese" :ts="row.pt"/>
-            <LanguageRow v-if="ru" language_full="Russian" :ts="row.ru"/>
-            <LanguageRow v-if="es" language_full="Spanish" :ts="row.es"/>
+            <LanguageRow v-if="ar" language_full="Arabic" :ts="row.ar" />
+            <LanguageRow v-if="fr" language_full="French" :ts="row.fr" />
+            <LanguageRow v-if="de" language_full="German" :ts="row.de" />
+            <LanguageRow v-if="hi" language_full="Hindi" :ts="row.hi" />
+            <LanguageRow v-if="it" language_full="Italian" :ts="row.it" />
+            <LanguageRow v-if="pt" language_full="Portuguese" :ts="row.pt" />
+            <LanguageRow v-if="ru" language_full="Russian" :ts="row.ru" />
+            <LanguageRow v-if="es" language_full="Spanish" :ts="row.es" />
           </tbody>
         </table>
       </div>
-      <a v-if="loading===true" class="button is-large is-white is-loading"></a>
+      <a v-if="loading === true" class="button is-large is-white is-loading"></a>
       <div class="back-to-top">
         <a v-on:click="back_to_top" class="button is-large is-primary is-rounded maruji">↑</a>
       </div>
@@ -58,13 +55,13 @@ import LanguageRow from "@/components/LanguageRow.vue";
 
 export default {
   components: {
-    LanguageRow
+    LanguageRow,
   },
   props: ["q", "match", "ar", "fr", "de", "hi", "it", "pt", "ru", "es"],
   data() {
     return {
       rows: [],
-      loading: false
+      loading: false,
     };
   },
   created() {
@@ -72,9 +69,9 @@ export default {
   },
   computed: {},
   watch: {
-    $route: function(to, from) {
+    $route: function (to, from) {
       this.renderRows();
-    }
+    },
   },
   methods: {
     renderRows() {
@@ -124,18 +121,13 @@ export default {
         // $emit("loading", true);
 
         axios
-          .get(
-            "https://gender.llll-ll.com/api/translate?q=" +
-              this.q +
-              exact_query +
-              language_query
-          )
-          .then(response => {
+          .get("https://gender-nouns-api.llll-ll.com/api/translate?q=" + this.q + exact_query + language_query)
+          .then((response) => {
             const data = response.data;
             // this.rows = response.data;
             this.rows.splice(0, 0, ...data);
           })
-          .catch(error => {
+          .catch((error) => {
             console.error(error);
             // this.rows = error;
           })
@@ -163,8 +155,8 @@ export default {
       if (nowY > 0) {
         window.setTimeout(this.back_to_top, 10);
       }
-    }
-  }
+    },
+  },
 };
 </script>
 
