@@ -47,7 +47,7 @@
       <div class="content has-text-centered">
         <p class="has-text-white">
           © 2019 kako-jun
-          <a href="https://github.com/kako-jun/gender">
+          <a href="https://github.com/kako-jun/gender_nouns_gui">
             <i class="fab fa-github fa-fw" aria-hidden="true"></i>
           </a>
           <a href="https://llll-ll.com">

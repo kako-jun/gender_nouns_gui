@@ -78,7 +78,7 @@
       <h2 class="title is-spaced maruji">See also</h2>
       <h3 class="subtitle is-spaced maruji">Offline version</h3>
       <p>
-        <a href="https://github.com/kako-jun/gender">kako-jun/gender</a>
+        <a href="https://github.com/kako-jun/gender_nouns_gui">kako-jun/gender_nouns_gui</a>
       </p>
       <p>for who has no constant Internet access.</p>
     </section>
@@ -87,7 +87,7 @@
       <p>This project is licensed under the MIT License.</p>
       <p>
         See the
-        <a href="https://github.com/kako-jun/gender/blob/master/LICENSE">LICENSE</a> file for details.
+        <a href="https://github.com/kako-jun/gender_nouns_gui/blob/master/LICENSE">LICENSE</a> file for details.
       </p>
     </section>
     <section class="section">
@@ -98,7 +98,7 @@
       <p>learning another language.</p>
       <h3 class="subtitle is-spaced maruji m-t-lg">Support</h3>
       <p><a href="https://twitter.com/kako_jun_42">Twitter</a></p>
-      <p><a href="https://github.com/kako-jun/gender/issues">GitHub Issues</a></p>
+      <p><a href="https://github.com/kako-jun/gender_nouns_gui/issues">GitHub Issues</a></p>
     </section>
   </div>
 </template>
